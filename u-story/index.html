@@ -1,17 +1,268 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>#</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="css/all.css" />
-		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-		<!--[if lt IE 9]>
-			<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-	</head>
-<body>
-	test
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Ustory - White 'НА ВЫХОД' Cap</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="assets/js/ie/html5shiv.min.js"></script>
+    <script src="assets/js/ie/respond.min.js"></script>
+    <![endif]-->
+    <script src="assets/js/libs/owl.carousel.min.js"></script>
+    <script src="assets/js/libs/owl.carousel2.thumbs.min.js"></script>
+    <script src="assets/js/libs/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/libs/jquery.foggy.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.modal-form').magnificPopup({
+            type: 'inline',
+            preloader: false,
+            focus: '#name',
+            showCloseBtn: false,
+            callbacks: {
+                open: function() {
+                    $('.modal-blur').foggy({
+                        blurRadius: 5
+                    });
+                },
+                close: function() {
+                    $('.modal-blur').foggy(false);
+                }
+            }
+        });
+
+        
+
+        var owl = $('#cart-gallery');
+        owl.owlCarousel({
+            items: 1,
+            mouseDrag: false,
+            thumbs: true,
+            thumbsPrerendered: true,
+            margin: 15,
+            responsive: {
+                0: {
+                    dots: false
+                },
+                1280: {
+                    dots: true
+                }
+            }
+        });
+
+        $('.owl-item').click(function() {
+            owl.trigger('next.owl.carousel');
+        });
+
+    });
+    </script>
+</head>
+<style>
+.modal-blur {
+    transition: all 0s;
+}
+
+.btn.active {
+    color: #fff;
+    background: #3cb8e9;
+    box-shadow: 0 0 18px 2px rgba(60, 184, 233, 0.2);
+}
+</style>
+
+<body class="cart-body">
+    <div id="white" class="visable animated fadeOut"></div>
+    <form id="order-modal" class="white-popup-block mfp-hide" name="commentform" method="post" action="send_form_email.php">
+        <div class="close left-menu-close open">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h2>This item available<br>with pre-order only!</h2>
+        <input type="text" id="name" name="name" pattern=".{3,}" placeholder="Name" required>
+        <input type="tel" id="phone" name="phone" pattern=".{11,}" placeholder="Phone" required>
+        <button type="submit" class="btn">Order!</button>
+        <div class="success"></div>
+        <a class="hidden modal-form show-success" href="#order-success"></a>
+    </form>
+    <div id="order-success" class="white-popup-block mfp-hide">
+        <div class="close left-menu-close open">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h2 class="line">Thanks!</h2>
+        <h3>We call you latter!</h3>
+        <img class="logo-icon" src="assets/img/logo-icon.svg" alt="">
+        <div class="social-links">
+            <span>Follow us on social:</span>
+            <a href="https://instagram.com/ustoryofficial" target="_blank"><img class="svg" src="assets/img/icon-instagram.svg" alt=""></a>
+            <a href="https://facebook.com/Ustoryofficial" target="_blank"><img class="svg" src="assets/img/icon-facebook.svg" alt=""></a>
+        </div>
+    </div>
+    <script>
+    function switchActiveBtn() {
+        var name = $('#name');
+        var phone = $('#phone');
+        var nameP = name.attr('pattern');
+        var phoneP = phone.attr('pattern');
+        var nameV = name.val();
+        var phoneV = phone.val();
+        var regExpName = new RegExp(nameP, 'g');
+        var regExpPhone = new RegExp(phoneP, 'g');
+        var isValidName = nameV.search(regExpName) !== -1;
+        var isValidPhone = phoneV.search(regExpPhone) !== -1;
+        var btn = $('#order-modal .btn');
+        if (isValidName && isValidPhone) {
+            btn.addClass('active');
+        } else {
+            btn.removeClass('active');
+        }
+    }
+    $('#name, #phone').on('input', function() {
+        switchActiveBtn();
+    });
+    </script>
+    <div class="modal-blur">
+        <div class="content border">
+            <header id="header" class="col-center-big">
+                <div class="col col-left">
+                    <a href="#" class="back-link"><img src="assets/img/icon-back.svg" alt=""> <span>Back</span></a>
+                    <a href="/">
+                        <img class="logotype" src="assets/img/logotype.svg" alt="">
+                    </a>
+                </div>
+                <div class="col col-center">
+                    <a href="/"><img class="logo-icon" src="assets/img/logo-icon.svg" alt=""></a>
+                </div>
+                <div class="col col-right">
+                    <div class="close right-menu-open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </header>
+            <section class="menu ontop left-menu">
+                <div class="head">
+                    <div class="logotype">
+                        <img src="assets/img/logotype.svg" alt="">
+                    </div>
+                    <div class="close left-menu-close open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="body">
+                    <div>
+                        <h2>Our story</h2>
+                        <p>Look, I was gonna go easy on you not to hurt your feelings</p>
+                        <p>But I'm only going to get this one chance (Six minutes, six minutes)</p>
+                        <p>Something's wrong, I can feel it (Six minutes, six minutes, Slim Shady, you're on)</p>
+                        <p>Just a feeling I've got.</p>
+                        <a href="/about.html" class="btn btn-animation">Join!<img src="assets/img/arrow.svg" alt=""></a>
+                    </div>
+                </div>
+            </section>
+            <section class="menu right-menu">
+                <div class="head">
+                </div>
+                <div class="body">
+                    <div>
+                        <nav id="nav">
+                            <ul>
+                                <li><a href="/about.html">About</a></li>
+                                <li><a href="/collection.html">Collection</a></li>
+                                <li><a href="/gallery.html">Gallery</a></li>
+                                <li><a href="/contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="copyright">
+                            &copy; 2017. u story.
+                            <br>All rights reserved.
+<br><br><a href="/termsandconditions.html">Юридическая информация</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    Follow us on social:
+                    <a href="https://instagram.com/ustoryofficial" target="_blank"><img class="svg" src="assets/img/icon-instagram.svg" alt=""></a>
+                    <a href="https://facebook.com/Ustoryofficial" target="_blank"><img class="svg" src="assets/img/icon-facebook.svg" alt=""></a>
+                </div>
+            </section>
+            <main id="main" class="cart-main">
+                <div class="hidden-logo">
+                    <a href="/"><img class="logo-icon" src="assets/img/logo-icon.svg" alt=""></a>
+                </div>
+                <div class="cart-nav">
+                    <div class="prev">
+                        <a href="/1B6000.html">
+                            <img src="assets/img/cart-arrow.png" alt="">
+                        </a>
+                    </div>
+                    <div class="next">
+                        <a href="/1B4021.html">
+                            <img src="assets/img/cart-arrow.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="col">
+                        <div class="cart-gallery" id="cart-gallery" data-slider-id="1">
+                            <div><img src="assets/img/cart/1B1000/1B1000_1_f.jpg" alt=""></div>
+                            <div><img src="assets/img/cart/1B1000/1B1000_2_f.jpg" alt=""></div>
+                        </div>
+                        <div class="owl-thumbs" data-slider-id="1">
+                            <div class="owl-thumb-item"><img src="assets/img/cart/1B1000/1B1000_1_s.jpg" alt=""></div>
+                            <div class="owl-thumb-item"><img src="assets/img/cart/1B1000/1B1000_2_s.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="col col-center"></div>
+                    <div class="col">
+                        <div>
+                            <form class="cart-form" action="">
+                                <div class="head">
+                                    <h1>White 'LOVE CLUB' Cap</h1>
+                                    <h3>Hello collection</h3>
+                                    <span>#1B1000</span>
+                                </div>
+                                <div class="body">
+                                    <div class="price">
+                                        <b>1800 р.</b>
+                                    </div>
+                                    </div>
+                                    <a class="btn add-basket" href="#">Add to cart</a><a class="btn size-open" href="#">Order</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer id="footer">
+            <div class="col col-left">
+                <a href="/cart-main-man.html" class="back"><img class="svg" src="assets/img/arrow.svg" alt=""> Back to collection</a>
+            </div>
+            <div class="col">
+                <img class="code" src="assets/img/code.svg" alt="">
+            </div>
+            <div class="col col-right social-links">
+                Follow us on social:
+                <a href="https://instagram.com/ustoryofficial" target="_blank"><img class="svg" src="assets/img/icon-instagram.svg" alt=""></a>
+                <a href="https://facebook.com/Ustoryofficial" target="_blank"><img class="svg" src="assets/img/icon-facebook.svg" alt=""></a>
+            </div>
+        </footer>
+    </div>
+    <script src="assets/js/libs/svginline.min.js"></script>
 </body>
+
 </html>

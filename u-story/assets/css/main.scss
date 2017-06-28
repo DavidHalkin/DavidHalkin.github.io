@@ -1,0 +1,18 @@
+/*
+    Connected all styles
+*/
+// Libs
+@import "libs/normalize.min";
+@import "libs/animate";
+@import "libs/owl.carousel";
+@import "libs/magnific-popup";
+
+// Secondary
+@import "fonts";
+@import "colors";
+@import "buttons";
+
+// Main
+@import "general";
+@import "sections";
+@import "media";
