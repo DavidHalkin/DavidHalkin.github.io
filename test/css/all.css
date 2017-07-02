@@ -648,7 +648,7 @@ padding-bottom: 0;
 
 .morphing-btn-clone {
   position: fixed;
-  background: #FF6666;
+  background: #fff;
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%;
@@ -672,7 +672,7 @@ padding-bottom: 0;
 }
 
 .fancybox-morphing .fancybox-bg {
-  background: #FF6666;
+  background: #fff;
   opacity: 1;
 }
 
@@ -682,7 +682,7 @@ padding-bottom: 0;
 }
 
 .fancybox-morphing .fancybox-button--close {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(40, 96, 165, 1);
   -webkit-border-radius: 50%;
      -moz-border-radius: 50%;
           border-radius: 50%;
@@ -707,7 +707,7 @@ padding-bottom: 0;
   margin: 0;
   position: relative;
   background: transparent;
-  color: #fff;
+  color: #2860a5;
   padding: 6em 15px;
   line-height: 2;
   z-index: 3;
@@ -719,7 +719,7 @@ padding-bottom: 0;
 	padding: 0 15px;
 }
 #morphing-content a {
-  color: #fff;
+  color: #2860a5;
 }
 .hidden-morphing{
 	display: none;
@@ -734,7 +734,7 @@ padding-bottom: 0;
 	width: 100%;
 }
 .sign-in-form .or:before {
-    background: #eaeef0 none repeat scroll 0 0;
+    background: #2860a5;
     content: "";
     height: 86px;
     left: 50%;
@@ -743,7 +743,7 @@ padding-bottom: 0;
     width: 1px;
 }
 .sign-in-form .or:after {
-    background: #eaeef0 none repeat scroll 0 0;
+    background: #2860a5;
     bottom: -104px;
     content: "";
     height: 86px;
@@ -752,7 +752,7 @@ padding-bottom: 0;
     width: 1px;
 }
 .sign-in-form .or {
-    color: #fff;
+    color: #2860a5;
     display: block;
     font-size: 14px;
     line-height: 25px;
