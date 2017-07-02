@@ -58,7 +58,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right etc-nav">
                   <li><a href="#" class="ripple">Login</a></li>
-                  <li><a href="#" class="btn btn-default custom ripple">Sign up</a></li>
+                  <li><a data-morphing id="morphing" data-src="#morphing-content" href="javascript:;" class="btn btn-default custom ripple">Sign up</a></li>
                   <li class="dropdown lang-part">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">EN<span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -149,7 +149,65 @@
                         <button class="btn btn-default tab-btn btn-block ripple" type="submit">START EXCHANGE!</button>
                       </div>
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="sell">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis eaque quia enim odit est nostrum sequi voluptatem, placeat praesentium cupiditate illum quo rerum sapiente, error aut aperiam reprehenderit ipsam nobis.</div>
+                    <div role="tabpanel" class="tab-pane" id="sell">
+                        <div class="row custom-row-14">
+                        <div class="col-xs-12 col-sm-6">
+                          <h3>2Amount you deposit:</h3>
+                          <select class="present" data-jcf='{"wrapNative": false, "wrapNativeOnMobile": false}'>
+                            <option class="hideme">Select gift !</option>
+                            <option data-image="images/bank.png" value="v4">Woo!</option>
+                            <option data-image="images/bank2.png" value="v5">Haaa!</option>
+                            <option data-image="images/test-icon3.png" value="v6">Boom?</option>
+                          </select>
+                          <div class="input-group">
+                            <input type="text" class="form-control" aria-label="..." value="123">
+                            <div class="input-group-btn">
+                              <button type="button" class="btn  btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD <span class="caret"></span></button>
+                              <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#">BTC</a></li>
+                                <li><a href="#">RUB</a></li>
+                              </ul>
+                            </div><!-- /btn-group -->
+                          </div><!-- /input-group -->
+                          <span class="help-txt">Min 50 USD - Max 20000 USD</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-6">
+                          <h3>Amount you recieve:</h3>
+                          <div class="input-group">
+                            <input type="text" class="form-control" aria-label="...">
+                            <div class="input-group-btn">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD <span class="caret"></span></button>
+                              <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#">BTC</a></li>
+                                <li><a href="#">RUB</a></li>
+                              </ul>
+                            </div><!-- /btn-group -->
+                          </div><!-- /input-group -->
+                          <div class="input-group">
+                            <input type="text" class="form-control" aria-label="...">
+                            <div class="input-group-btn">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">USD <span class="caret"></span></button>
+                              <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#">BTC</a></li>
+                                <li><a href="#">RUB</a></li>
+                              </ul>
+                            </div><!-- /btn-group -->
+                          </div><!-- /input-group -->
+                          <span class="help-txt">Our reserve 100000 USD</span>
+                        </div>
+                      </div>
+                      <div class="commission">
+                        <h3>Commission details:</h3>
+                        <div class="row">
+                          <div class="col-sm-4 col-xs-12">Credit card: 10 USD</div>
+                          <div class="col-sm-4 col-xs-12">BTCBIT: 8%</div>
+                          <div class="col-sm-4 col-xs-12">Bitcoin: 0,6 USD</div>
+                        </div>
+                      </div>
+                      <div class="footer-tabs text-center">
+                        <button class="btn btn-default tab-btn btn-block ripple" type="submit">START EXCHANGE!</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -286,6 +344,48 @@
           <span class="copy">© 2017 BTCBIT. All rights reserved.</span>
         </div>
       </div>
+    </div>
+    <div id="morphing-content" class="hidden-morphing">
+      <a class="navbar-brand logo" href="#">Brand</a>
+      <h2 class="text-center">Sign In to BTCBIT</h2>
+        <div class="sign-in-form">
+          <form id="submit_form" name="form">
+            <div class="row holder-morphing">
+              <div class="col-xs-5 column-morphing">
+                <div class="form-group" >
+                  <label for="email">Email or Username</label>
+                  <input name="email" class="form-control input-lg" id="email" type="text"> 
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input name="password" class="form-control input-lg" id="password" required="" type="password">
+                </div>
+                <div class="row">
+                  <div class="col-xs-6">
+                    <button class="btn btn-info btn-block btn-lg">Sign In</button>
+                  </div>
+                  <div class="col-xs-6 forgot-text text-right"><a href="#" class="forgot-password-link">Forgot password?</a></div>
+                </div>
+              </div>
+              <div class="col-xs-2 column-morphing">
+                <span class="or">or</span>
+              </div>
+              <div class="col-xs-5 column-morphing">
+                <div class="social-sign">
+                  <ul>
+                    <li><a href="#"><i class="fa fa-facebook-official fa-3x" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter-square fa-3x" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-vk fa-3x" aria-hidden="true"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="sign-link-up-block text-center">
+              <p>Don’t have account yet? <a href="#" class="link">Register</a></p>
+            </div>
+          </form>
+        </div>
     </div>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
