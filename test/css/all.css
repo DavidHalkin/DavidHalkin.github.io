@@ -129,7 +129,7 @@ article ,aside ,audio,canvas,datalist,details,figcaption,figure,footer,header,hg
 .etc-nav{
 	position: absolute;
 	right: 0;
-	top: 5px;
+	top: 0;
 }
 .navbar-default .navbar-nav.main-nav > .active > a,
 .navbar-default .navbar-nav.main-nav > .active > a:focus,
