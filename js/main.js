@@ -1,15 +1,9 @@
+// custom select/////////////////////////////////////////////////////////////////////////////////////////////
 $(function() {
 	jcf.replaceAll();
 });
-// $(document).ready(function() {
-	
-// 	setTimeout(function(){
-// 		$('body').addClass('loaded');
-// 		 new WOW().init();
-// 	}, 200);
-	
-// });
-// Step 1: Create jQuery plugin
+
+// Step 1: Create jQuery plugin morphin///////////////////////////////////////////////////////////////////////////
 // ============================
 
 $.fn.fancyMorph = function( opts ) {
@@ -169,3 +163,11 @@ $.fn.fancyMorph = function( opts ) {
 $("[data-morphing]").fancyMorph({
   hash : 'morphing'
 });
+
+// tabs/////////////////////////////////////////////////////////////////////////////////////////////////////////
+$("ul.nav-tabs a").click(function (e) {
+  e.preventDefault();  
+    $(this).tab('show');
+});
+// wow js (animate blocks)//////////////////////////////////////////////////////////////////////////////////////
+new WOW().init();
